@@ -5,12 +5,13 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="780.0" stylesheets="@styles/home.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sms.HomeController">
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="780.0" stylesheets="@styles/home.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sms.HomeController">
    <top>
       <HBox alignment="TOP_RIGHT" prefHeight="45.0" prefWidth="780.0" styleClass="hBox" stylesheets="@styles/home.css" BorderPane.alignment="CENTER">
          <children>
@@ -64,7 +65,7 @@
    <left>
       <VBox prefHeight="495.0" prefWidth="180.0" spacing="15.0" styleClass="vBox" stylesheets="@styles/home.css" BorderPane.alignment="CENTER">
          <children>
-            <Button maxWidth="-Infinity" mnemonicParsing="false" prefWidth="180.0" styleClass="navBtns" stylesheets="@styles/home.css" text="Home">
+            <Button fx:id="btnHome" maxWidth="-Infinity" mnemonicParsing="false" onAction="#clickHome" prefWidth="180.0" styleClass="navBtns" stylesheets="@styles/home.css" text="Home">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
@@ -72,7 +73,7 @@
                   <Insets top="15.0" />
                </VBox.margin>
             </Button>
-            <Button maxWidth="-Infinity" mnemonicParsing="false" prefWidth="180.0" styleClass="navBtns" stylesheets="@styles/home.css" text="Add Student">
+            <Button fx:id="btnAddStu" maxWidth="-Infinity" mnemonicParsing="false" onAction="#clickAddStu" prefWidth="180.0" styleClass="navBtns" stylesheets="@styles/home.css" text="Add Student">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
@@ -80,7 +81,7 @@
                   <Insets top="15.0" />
                </VBox.margin>
             </Button>
-            <Button maxWidth="-Infinity" mnemonicParsing="false" prefWidth="180.0" styleClass="navBtns" stylesheets="@styles/home.css" text="View Students">
+            <Button fx:id="btnViewStu" maxWidth="-Infinity" mnemonicParsing="false" onAction="#clickViewStu" prefWidth="180.0" styleClass="navBtns" stylesheets="@styles/home.css" text="View Students">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
@@ -88,7 +89,7 @@
                   <Insets top="15.0" />
                </VBox.margin>
             </Button>
-            <Button maxWidth="-Infinity" mnemonicParsing="false" prefWidth="180.0" styleClass="navBtns" stylesheets="@styles/home.css" text="Add Exams">
+            <Button fx:id="btnAddExm" maxWidth="-Infinity" mnemonicParsing="false" onAction="#clickAddExm" prefWidth="180.0" styleClass="navBtns" stylesheets="@styles/home.css" text="Add Exams">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
@@ -96,7 +97,7 @@
                   <Insets top="15.0" />
                </VBox.margin>
             </Button>
-            <Button maxWidth="-Infinity" mnemonicParsing="false" prefWidth="180.0" styleClass="navBtns" stylesheets="@styles/home.css" text="Statics">
+            <Button fx:id="btnStact" maxWidth="-Infinity" mnemonicParsing="false" onAction="#clickStact" prefWidth="180.0" styleClass="navBtns" stylesheets="@styles/home.css" text="Statics">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
@@ -113,4 +114,7 @@
          </padding>
       </VBox>
    </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
 </BorderPane>
