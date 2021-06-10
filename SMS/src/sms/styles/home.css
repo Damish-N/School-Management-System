@@ -1,0 +1,23 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    
+}
+
+.hBox{
+    -fx-background-color: #36454F;
+}
+.userName{
+    -fx-text-fill: #C3CED6;
+}
+.btn{
+    -fx-text-fill: #C3CED6;
+    -fx-background-color: #5B7586;
+    -fx-background-radius:75;
+}
+.btn:hover{
+    
+    -fx-background-color: #ffffff;
+}
