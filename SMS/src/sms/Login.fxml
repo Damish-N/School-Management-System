@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sms.LoginController">
    <left>
       <AnchorPane prefHeight="540.0" prefWidth="300.0" style="-fx-background-color: #36454F;" BorderPane.alignment="CENTER">
@@ -24,7 +23,7 @@
       </AnchorPane>
    </left>
    <right>
-      <AnchorPane prefHeight="540.0" prefWidth="480.0" style="-fx-background-color: D6;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="540.0" prefWidth="480.0" BorderPane.alignment="CENTER">
          <children>
             <TextField layoutX="166.0" layoutY="198.0" prefHeight="45.0" prefWidth="190.0" promptText="UserName" style="-fx-background-color: transparent; -fx-border-color: #36454F; -fx-border-width: 0 0 5 0;">
                <font>
@@ -59,6 +58,11 @@
             <Label alignment="CENTER_RIGHT" layoutX="238.0" layoutY="327.0" prefHeight="17.0" prefWidth="118.0" style="-fx-text-fill: #36454F;" text="Forget Password" textAlignment="CENTER">
                <font>
                   <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="signUp" alignment="CENTER_RIGHT" layoutX="184.0" layoutY="416.0" onMouseClicked="#clickSignUp" text="Did You haven't Account Click Here">
+               <font>
+                  <Font name="System Bold Italic" size="11.0" />
                </font>
             </Label>
          </children>

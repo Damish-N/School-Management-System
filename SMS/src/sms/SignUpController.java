@@ -16,11 +16,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 /**
@@ -28,44 +26,31 @@ import javafx.stage.Stage;
  *
  * @author HP
  */
-public class LoginController implements Initializable {
+public class SignUpController implements Initializable {
 
     @FXML
-    private Button btnLogin;
+    private Button btnSignUp;
     @FXML
-    private Label signUp;
+    private Label login;
 
-    /**
-     * Initializes the controller class.
-     */
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
 
     @FXML
-    private void clickLogin(ActionEvent event) {
-        try {
-            Parent root = null;
-            Stage stage = new Stage();
-            ((Node) event.getSource()).getScene().getWindow().hide();
-            root = FXMLLoader.load(getClass().getResource("Home.fxml"));
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException ex) {
-            Logger.getLogger(HomeController.class.getName()).log(Level.SEVERE, null, ex);
-        }
+    private void clickSignUp(ActionEvent event) {
     }
 
     @FXML
-    private void clickSignUp(MouseEvent event) {
+    private void clickLogin(MouseEvent event) {
         try {
             Parent root = null;
             Stage stage = new Stage();
             ((Node) event.getSource()).getScene().getWindow().hide();
-            root = FXMLLoader.load(getClass().getResource("SignUp.fxml"));
-            Scene scene = new Scene(root);
+            root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+            javafx.scene.Scene scene = new javafx.scene.Scene(root);
             stage.setScene(scene);
             stage.show();
         } catch (IOException ex) {
