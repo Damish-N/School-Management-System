@@ -8,6 +8,7 @@
 
 .hBox{
     -fx-background-color: #36454F;
+    -fx-border-color: #8CA2B0;
 }
 .userName{
     -fx-text-fill: #C3CED6;
@@ -26,4 +27,11 @@
 }
 .header{
    -fx-text-fill: #C3CED6;
+}
+.navBtns{
+   -fx-background-color: #8CA2B0;
+}
+.vBox{
+    -fx-border-color: #8CA2B0;
+    -fx-background-color: #36454F;
 }
