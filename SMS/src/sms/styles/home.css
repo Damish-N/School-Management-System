@@ -21,3 +21,9 @@
     
     -fx-background-color: #ffffff;
 }
+.time{
+    -fx-text-fill: #C3CED6;
+}
+.header{
+   -fx-text-fill: #C3CED6;
+}
