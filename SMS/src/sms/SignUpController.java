@@ -86,6 +86,19 @@ public class SignUpController implements Initializable {
                 }
             }
         }else{
+            if (signUpModel.isCreatedTeacher(userName, name, password, bDay)) {
+                try {
+                    Parent root = null;
+                    Stage stage = new Stage();
+                    ((Node) event.getSource()).getScene().getWindow().hide();
+                    root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+                    javafx.scene.Scene scene = new javafx.scene.Scene(root);
+                    stage.setScene(scene);
+                    stage.show();
+                } catch (IOException ex) {
+                    Logger.getLogger(SignUpController.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
             System.out.println("Still not function");
         }
 

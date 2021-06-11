@@ -68,4 +68,35 @@ public class SignUpModel {
         }
     }
 
+    public boolean isCreatedTeacher(String userName, String name, String password, String bDay) {
+        try {
+            PreparedStatement preparedStatement = null;
+            ResultSet resultSet = null;
+
+            String query = "";
+            query = "INSERT INTO teachers (userName,name,password,birthDay)   VALUES (?,?,?,?)";
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, "TEC-" + userName);
+            preparedStatement.setString(2, name);
+            preparedStatement.setString(3, password);
+            preparedStatement.setString(4, bDay);
+
+//            resultSet = preparedStatement.executeQuery();
+            int i = preparedStatement.executeUpdate();
+            System.out.println(bDay);
+            if (i > 0) {
+                System.out.println("wadee okey");
+                return true;
+            } else {
+                System.out.println("wadee  not okey");
+                return false;
+            }
+
+        } catch (SQLException ex) {
+            Logger.getLogger(SignUpModel.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
+        }
+
+    }
+
 }
