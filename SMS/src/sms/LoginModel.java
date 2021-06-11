@@ -39,9 +39,11 @@ public class LoginModel {
     public boolean isLogin(String user, String password) throws SQLException {
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
+        
+        
         String query = "";
-        System.err.println(user);
-        if (user.equals("PRI-damish")) {
+//        System.err.println(user);
+        if (user.matches("PRI(.*)")) {
             try {
                 query = "Select * from principle where userName= ? and password = ? ";
                 preparedStatement = con.prepareStatement(query);
