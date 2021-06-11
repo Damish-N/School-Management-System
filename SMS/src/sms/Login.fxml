@@ -25,12 +25,12 @@
    <right>
       <AnchorPane prefHeight="540.0" prefWidth="480.0" BorderPane.alignment="CENTER">
          <children>
-            <TextField layoutX="166.0" layoutY="198.0" prefHeight="45.0" prefWidth="190.0" promptText="UserName" style="-fx-background-color: transparent; -fx-border-color: #36454F; -fx-border-width: 0 0 5 0;">
+            <TextField fx:id="lblUserName" layoutX="166.0" layoutY="198.0" prefHeight="45.0" prefWidth="190.0" promptText="UserName" style="-fx-background-color: transparent; -fx-border-color: #36454F; -fx-border-width: 0 0 5 0;">
                <font>
                   <Font size="15.0" />
                </font>
             </TextField>
-            <TextField layoutX="166.0" layoutY="270.0" prefHeight="45.0" prefWidth="190.0" promptText="password" style="-fx-background-color: transparent; -fx-border-color: #36454F; -fx-border-width: 0 0 5 0;">
+            <TextField fx:id="lblPassword" layoutX="166.0" layoutY="270.0" prefHeight="45.0" prefWidth="190.0" promptText="password" style="-fx-background-color: transparent; -fx-border-color: #36454F; -fx-border-width: 0 0 5 0;">
                <font>
                   <Font size="15.0" />
                </font>
