@@ -1,14 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.net.URL?>
-<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="495.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16" fx:controller="sms.ViewTeachersController">
+<AnchorPane id="AnchorPane" prefHeight="495.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sms.ViewTeachersController">
     <stylesheets>
         <URL value="@/sms/styles/viewteachers.css" />
     </stylesheets>
    <children>
-      <Button layoutX="254.0" layoutY="235.0" mnemonicParsing="false" text="View Teachers" />
+      <Label layoutX="220.0" layoutY="14.0" prefHeight="38.0" prefWidth="150.0" text="Pending Teachers">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="220.0" layoutY="239.0" prefHeight="25.0" prefWidth="150.0" text="Registerd Teachers">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tvPendingTech" layoutX="64.0" layoutY="59.0" prefHeight="172.0" prefWidth="472.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="97.0" text="Id" />
+          <TableColumn fx:id="colUserName" prefWidth="110.0" text="userName" />
+            <TableColumn fx:id="colName" prefWidth="115.0" text="Name" />
+            <TableColumn fx:id="colBirthDay" prefWidth="149.0" text="Date of Birth" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tvRegTech" layoutX="66.0" layoutY="273.0" prefHeight="200.0" prefWidth="472.0">
+        <columns>
+          <TableColumn fx:id="colIdR" prefWidth="103.0" text="Id" />
+          <TableColumn fx:id="colUserNameR" prefWidth="114.0" text="userName" />
+            <TableColumn fx:id="colNameR" prefWidth="132.0" text="Name" />
+            <TableColumn fx:id="colDOBR" prefWidth="117.0" text="Date of Birth" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>
