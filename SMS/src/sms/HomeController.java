@@ -40,8 +40,6 @@ public class HomeController implements Initializable {
     @FXML
     private Button btnAddStu;
     @FXML
-    private Button btnViewStu;
-    @FXML
     private Button btnAddExm;
     @FXML
     private Button btnStact;
@@ -51,12 +49,16 @@ public class HomeController implements Initializable {
     private Label userName;
     @FXML
     private Label setTime;
+    @FXML
+    private Button btnViewTech;
+    @FXML
+    private Button btnViewStu;
 
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         String name = instance.getUserName();
-
+//       userName = u.getUserName();
         System.out.println(name);
         userName.setText(name);
         Thread timerThread = new Thread(() -> {
@@ -116,10 +118,14 @@ public class HomeController implements Initializable {
     }
 
     @FXML
+    private void clickViewTech(ActionEvent event) {
+         selectScreen("ViewTeachers");
+    }
+
+    @FXML
     private void clickViewStu(ActionEvent event) {
         selectScreen("ViewStudents");
     }
-
     @FXML
     private void clickAddExm(ActionEvent event) {
     }
@@ -137,6 +143,12 @@ public class HomeController implements Initializable {
             Logger.getLogger(HomeController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+
+    
+
+    
+
+
     
     
     
