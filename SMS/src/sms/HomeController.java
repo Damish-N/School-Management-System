@@ -7,9 +7,12 @@ package sms;
 
 import java.io.IOException;
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -18,8 +21,10 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import static sms.UserSession.instance;
 
 /**
  * FXML Controller class
@@ -42,10 +47,39 @@ public class HomeController implements Initializable {
     private Button btnStact;
     @FXML
     private BorderPane borderPane;
+    @FXML
+    private Label userName;
+    @FXML
+    private Label setTime;
 
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        String name = instance.getUserName();
+
+        System.out.println(name);
+        userName.setText(name);
+        Thread timerThread = new Thread(() -> {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+        while (true) {
+            try {
+                Thread.sleep(1000); //1 second
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            final String time = simpleDateFormat.format(new Date());
+            Platform.runLater(() -> {
+                setTime.setText(time);
+            });
+        }
+    });   timerThread.start();
+        
+        
+        
+        
+        
+        
+        
         try {
             
             Parent root = null;

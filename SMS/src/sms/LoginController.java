@@ -62,13 +62,14 @@ public class LoginController implements Initializable {
                 Parent root = null;
                 Stage stage = new Stage();
                 ((Node) event.getSource()).getScene().getWindow().hide();
+                UserSession.getInstace(lblUserName.getText());
 
                 if (lblUserName.getText().matches("PRI-(.*)")) {
                     root = FXMLLoader.load(getClass().getResource("Home.fxml"));
                     Scene scene = new Scene(root);
                     stage.setScene(scene);
                     stage.show();
-                }else{
+                } else if (lblUserName.getText().matches("TEC-(.*)")) {
                     root = FXMLLoader.load(getClass().getResource("HomeTeacher.fxml"));
                     Scene scene = new Scene(root);
                     stage.setScene(scene);

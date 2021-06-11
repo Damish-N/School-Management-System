@@ -66,7 +66,7 @@ public class LoginModel {
         } else {
 
             try {
-                query = "Select * from teachers where userName= ? and password = ? ";
+                query = "Select * from teachers where userName= ? and password = ?  and status == 1";
                 preparedStatement = con.prepareStatement(query);
                 preparedStatement.setString(1, user);
                 preparedStatement.setString(2, password);
