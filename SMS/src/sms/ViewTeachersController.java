@@ -73,7 +73,7 @@ public class ViewTeachersController implements Initializable {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                
+
                 Platform.runLater(() -> {
                     pendingTeach();
                     regTeach();
@@ -81,7 +81,6 @@ public class ViewTeachersController implements Initializable {
             }
         });
         timerThread.start();
-        
 
         tvPendingTech.setRowFactory(tv -> {
             TableRow<Teachers> row = new TableRow<>();
@@ -91,10 +90,17 @@ public class ViewTeachersController implements Initializable {
                         Teachers rowData = row.getItem();
                         System.out.println(rowData.getName());
 
-                        Parent root = null;
+//                        Parent root = null;
                         Stage stage = new Stage();
 //                        ((Node) event.getSource()).getScene().getWindow().setOpacity(.5);
-                        root = FXMLLoader.load(getClass().getResource("TeacherReq.fxml"));
+//                        root = FXMLLoader.load(getClass().getResource("TeacherReq.fxml"));
+
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("TeacherReq.fxml"));
+                        Parent root = loader.load();
+                        
+                        TeacherReqController c = loader.getController();
+                        c.setLabelText(rowData.getUserName(), rowData.getName(),rowData.getTeacherId());
+
                         Scene scene = new Scene(root);
                         stage.initModality(Modality.APPLICATION_MODAL);
                         stage.initOwner(root.getScene().getWindow());

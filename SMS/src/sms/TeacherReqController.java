@@ -11,6 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 /**
@@ -26,6 +27,14 @@ public class TeacherReqController implements Initializable {
     private Button btnRej;
     @FXML
     private Button close;
+    @FXML
+    private TextField lblUserName;
+    @FXML
+    private TextField lblName;
+    @FXML
+    private TextField lblId;
+
+    TeacherReqModel teacherReqModel = new TeacherReqModel();
 
     /**
      * Initializes the controller class.
@@ -37,6 +46,15 @@ public class TeacherReqController implements Initializable {
 
     @FXML
     private void clickAccept(ActionEvent event) {
+        System.out.println("helllo");
+        if (teacherReqModel.acceptReq(lblUserName.getText())) {
+            System.out.println("Registerd");
+            Stage stage = (Stage) close.getScene().getWindow();
+            // do what you have to do
+            stage.close();
+
+        };
+
     }
 
     @FXML
@@ -50,7 +68,13 @@ public class TeacherReqController implements Initializable {
         Stage stage = (Stage) close.getScene().getWindow();
         // do what you have to do
         stage.close();
-        
+
+    }
+
+    public void setLabelText(String userName, String name, int Id) {
+        lblUserName.setText(userName);
+        lblName.setText(name);
+        lblId.setText(String.valueOf(Id));
     }
 
 }
