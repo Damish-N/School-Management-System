@@ -1,0 +1,16 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.btnRegect{
+    -fx-background-color: red;
+    -fx-text-fill: whitesmoke;
+}
+.btnAccpt{
+    -fx-background-color: green;
+    -fx-text-fill: whitesmoke;
+
+}

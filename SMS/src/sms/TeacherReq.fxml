@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: #36454F;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sms.TeacherReqController">
+    <stylesheets>
+        <URL value="@/sms/styles/teacherreq.css" />
+    </stylesheets>
+   <children>
+      <Button fx:id="btnAccept" layoutX="224.0" layoutY="341.0" mnemonicParsing="false" onAction="#clickAccept" prefHeight="33.0" prefWidth="85.0" styleClass="btnAccpt" stylesheets="@styles/teacherreq.css" text="Accept">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnRej" layoutX="86.0" layoutY="341.0" mnemonicParsing="false" onAction="#clickReject" prefHeight="33.0" prefWidth="85.0" styleClass="btnRegect" stylesheets="@styles/teacherreq.css" text="Reject">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="114.0" fitWidth="105.0" layoutX="244.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/user.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="30.0" layoutY="47.0" prefHeight="33.0" prefWidth="170.0" style="-fx-background-color: white;" text="Teacher's Request" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="close" layoutX="358.0" layoutY="14.0" mnemonicParsing="false" onAction="#clickClose" opacity="0.72" text="❌" />
+   </children>
+</AnchorPane>
